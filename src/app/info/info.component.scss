@@ -1,0 +1,62 @@
+@use '../../variables.scss' as vars;
+
+@mixin rectangular-button-styles($color, $border-color) {
+    border-radius: 0;
+    opacity: 0.9;
+    box-sizing: content-box;
+    padding: 0.25rem 2rem;
+    color: $color !important;
+    border-color: $border-color !important;
+    margin-top: 0.25rem;
+}
+
+.rectangular-button {
+    @include rectangular-button-styles(dimgray, darkgray);
+}
+
+.rectangular-button-green {
+    @include rectangular-button-styles(white, white);
+}
+
+.info-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.15em;
+    letter-spacing: 1px;
+    @media screen and (max-width: 1279px) {
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+    }
+}
+
+.info-content {
+    padding: 3em 6em 3em 10em;
+    margin-right: 5em;
+    background-color: whitesmoke;
+    border-radius: 0 3em 0 0;
+    @media screen and (max-width: 1279px) {
+        padding: 3rem 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.newsletter {
+    padding: 2.75em 10em 2.5em 6em;
+    margin-right: 5em;
+    background-image: linear-gradient(to right, vars.$color-light-blue, vars.$color-blue);
+    color:white;
+    font-weight: 300;
+
+    .info-header{
+        font-size: 2.25rem;
+    }
+
+    @media screen and (max-width: 1279px) {
+        padding: 2.75rem 1.5rem;
+        margin-right: 1.5rem;
+
+        .info-header{
+            font-size: 1.25rem;
+        }
+    }
+}

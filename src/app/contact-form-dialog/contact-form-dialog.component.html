@@ -1,0 +1,39 @@
+<h1 class="mt-4 ms-4">Kontaktformular</h1>
+<mat-dialog-content>
+    <div class="mb-4"> Interesse an einem Projekt oder Job? Wir freuen uns auf Post – fülle einfach das folgende Formular aus und wir antworten dir schnellstmöglich. </div>
+    <div [formGroup]="contactForm" class="row gy-2">
+        <mat-form-field appearance="fill" class="col-12 col-sm-6">
+            <mat-label>Vorname</mat-label>
+            <input
+            matInput
+            formControlName="firstName"
+            />
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="col-12 col-sm-6">
+            <mat-label>Nachname</mat-label>
+            <input
+            matInput
+            formControlName="lastName"
+            />
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="col-12">
+            <mat-label>E-Mail</mat-label>
+            <input
+            matInput
+            formControlName="email"
+            required
+            />
+            @if (contactForm.controls['email'].invalid) {
+            <mat-error>Ungültige E-Mail</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field class="col-12">
+            <mat-label>Deine Mitteilung</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Abbrechen</button>
+  <button mat-button mat-dialog-close cdkFocusInitial [disabled]="contactForm.invalid">Senden</button>
+</mat-dialog-actions>

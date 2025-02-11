@@ -1,0 +1,29 @@
+<div class="mx-3">
+    <div class="row justify-content-between">
+        <div class="col-auto my-xl-4 my-sm-3 align-self-center">
+            <img src="assets/images/logo.jpg" alt="active value logo" class="logo">
+        </div>
+        <div class="col-auto my-xl-4 my-sm-3">
+            <button class="menu-button" [matMenuTriggerFor]="menu" (click)="toggleMenu()">
+                <div class="mb-1" style="font-size: small; color: gray">MENÜ</div>
+                <div class="mb-1">
+                    <div class="line1" [@lineAnimation]="isActive ? 'active' : 'inactive'"></div>
+                    <div class="line2" [@lineAnimation2]="isActive ? 'active' : 'inactive'"></div>
+                </div>
+            </button>
+            <mat-menu #menu="matMenu" (closed)="toggleMenu()">
+                <button mat-menu-item>Menu 1</button>
+                <button mat-menu-item>Menu 2</button>
+                <button mat-menu-item>Menu 3</button>
+                <button mat-menu-item>Menu 4</button>
+            </mat-menu>
+        </div>
+    </div>
+	<ngb-carousel [showNavigationArrows]="true" [interval]="5000">
+		@for (image of images; track image) {
+			<ng-template ngbSlide>
+                <img [src]="image" alt="Random slide" class="carousel-image"/>
+			</ng-template>
+		}
+	</ngb-carousel>
+</div>

@@ -1,8 +1,13 @@
 # Probe
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7 and Nodejs version 22.13.0.
 
 ## Development server
+Before running the development server, make sure you have installed all dependencies with 
+
+```bash
+`npm install`.
+```
 
 To start a local development server, run:
 

@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+
+@use 'bootstrap/scss/bootstrap';
+
+@mixin font-face($font-family, $font-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-path) format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//Add Poppins fonts
+@include font-face('Poppins', 'assets/fonts/Poppins-Black.ttf', 900, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-BlackItalic.ttf', 900, italic);
+@include font-face('Poppins', 'assets/fonts/Poppins-Bold.ttf', 700, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-BoldItalic.ttf', 700, italic);
+@include font-face('Poppins', 'assets/fonts/Poppins-ExtraBold.ttf', 800, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-ExtraBoldItalic.ttf', 800, italic);
+@include font-face('Poppins', 'assets/fonts/Poppins-ExtraLight.ttf', 200, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-ExtraLightItalic.ttf', 200, italic);
+@include font-face('Poppins', 'assets/fonts/Poppins-Italic.ttf', normal, italic);
+@include font-face('Poppins', 'assets/fonts/Poppins-Light.ttf', 300, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-LightItalic.ttf', 300, italic);
+@include font-face('Poppins', 'assets/fonts/Poppins-Medium.ttf', 500, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-MediumItalic.ttf', 500, italic);
+@include font-face('Poppins', 'assets/fonts/Poppins-Regular.ttf', 400, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-SemiBold.ttf', 600, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-SemiBoldItalic.ttf', 600, italic);
+@include font-face('Poppins', 'assets/fonts/Poppins-Thin.ttf', 100, normal);
+@include font-face('Poppins', 'assets/fonts/Poppins-ThinItalic.ttf', 100, italic);
+
+//Add Barlow fonts
+@include font-face('Barlow', 'assets/fonts/Barlow-Black.ttf', 900, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-BlackItalic.ttf', 900, italic);
+@include font-face('Barlow', 'assets/fonts/Barlow-Bold.ttf', 700, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-BoldItalic.ttf', 700, italic);
+@include font-face('Barlow', 'assets/fonts/Barlow-ExtraBold.ttf', 800, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-ExtraBoldItalic.ttf', 800, italic);
+@include font-face('Barlow', 'assets/fonts/Barlow-ExtraLight.ttf', 200, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-ExtraLightItalic.ttf', 200, italic);
+@include font-face('Barlow', 'assets/fonts/Barlow-Italic.ttf', normal, italic);
+@include font-face('Barlow', 'assets/fonts/Barlow-Light.ttf', 300, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-LightItalic.ttf', 300, italic);
+@include font-face('Barlow', 'assets/fonts/Barlow-Medium.ttf', 500, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-MediumItalic.ttf', 500, italic);
+@include font-face('Barlow', 'assets/fonts/Barlow-Regular.ttf', 400, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-SemiBold.ttf', 600, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-SemiBoldItalic.ttf', 600, italic);
+@include font-face('Barlow', 'assets/fonts/Barlow-Thin.ttf', 100, normal);
+@include font-face('Barlow', 'assets/fonts/Barlow-ThinItalic.ttf', 100, italic);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Poppins', sans-serif; }
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+.date-stamp {
+  letter-spacing: 2px;
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.content-header {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.15em;
+  letter-spacing: 1px;
+  @media screen and (max-width: 1279px) {
+    font-size: 2.25rem;    
+  }
+}
+
+.content-text {
+  font-size: 16.5px;
+  word-spacing: 2px;
+  line-height: 1.5rem;
+  font-family: "Barlow", sans-serif;
+  @media screen and (max-width: 1279px) {
+    font-size: 0.9rem;    
+  }
+}

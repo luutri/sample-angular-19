@@ -1,0 +1,12 @@
+.footer-content {
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-family: "Barlow", sans-serif;
+}
+
+.mobile-media-icon {
+    display: none;
+    @media screen and (max-width: 1279px) {
+        display: block;
+    }
+}
